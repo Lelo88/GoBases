@@ -43,7 +43,8 @@ func dividir(num1, num2 float64) (resultado float64) {
 func orquestarOperacion(nums []float64, operacion Operacion)(resultado float64){
 	for index := range nums {
 		if index == 0 {
-			resultado = nums[index]
+			resultado = nums[index] //igualamos el resultado al primer indice en el caso de que metamos un cero implicitamente
+			//podemos corroborar agregando un cero en la funcion de multiplicar o dividir
 			continue
 		}
 
