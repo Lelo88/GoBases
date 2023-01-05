@@ -68,10 +68,31 @@ func operacionAritmetica(operador string, nums ...float64) (resultado float64){
 	return 
 }
 
+func operacionAritmetica2(operador string) (resultado Operacion){ //funcion que me retorna otra funcion. solo paso el operador y el resutlado sera una de las funciones de operacion aritmetica
+	switch operador {
+		case OperadorSuma:
+			resultado = sumar
+		case OperadorResta:
+			resultado = restar
+		case OperadorMult:
+			resultado = multiplicar
+		case OperadorDiv:
+			resultado = dividir
+	}
+	return 
+}
+
 func main(){
 	fmt.Println(operacionAritmetica(OperadorSuma, 1,2,3,4,5))
 	fmt.Println(operacionAritmetica(OperadorResta, 1,2,3,4,5))
 	fmt.Println(operacionAritmetica(OperadorMult, 1,2,3,4,5))
 	fmt.Println(operacionAritmetica(OperadorDiv, 1,2,3,4,5))
+
+	fmt.Printf("\n")
+
+	//devolucion de funciones 
+	oper := operacionAritmetica2(OperadorSuma) //llamo a la funcion pasando SOLO el string en este caso
+	
+	fmt.Println(oper(5.6,3.2)) //luego le paso los argumentos a la variable que he creado (es como si se transformara en una funcion)
 }
 
