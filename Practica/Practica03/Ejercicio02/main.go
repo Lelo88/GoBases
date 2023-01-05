@@ -34,7 +34,6 @@ func main(){
 
 	fmt.Println(notas)
 
-
 	fmt.Printf("El promedio de las notas ingresadas es de %.2f\n", calculaPromedio(notas...))
 }
 
