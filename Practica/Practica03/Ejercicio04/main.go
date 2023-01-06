@@ -74,6 +74,10 @@ func ingreso() (status bool, notas []float64){
 		}
 		notas = append(notas, float64(nota))
 	}
+
+	if len(notas) == 0{
+		return
+	}
 	
 	status = true
 	return 
@@ -83,7 +87,7 @@ func main(){
 	ok, notas := ingreso()
 
 	if !ok {
-		fmt.Println("No se pueden realizar los calculos solicitados")
+		panic("No se pueden realizar los calculos solicitados")
 	} else {
 		fmt.Println("Estas son las notas ingresadas:",notas)
 	}
@@ -91,4 +95,3 @@ func main(){
 	promedio, maximo, minimo := operacionProfesores(average), operacionProfesores(maximum), operacionProfesores(minimum)
 	fmt.Printf("El promedio de las notas es de %.2f. La nota minima ingresada es de %.2f y la maxima es de %.2f.\n", promedio(notas...), minimo(notas...), maximo(notas...))
 }
-
