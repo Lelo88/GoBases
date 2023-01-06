@@ -15,7 +15,7 @@ package main
 
 import "fmt"
 
-type Operacion func (notas ...float64) float64
+type Operacion func (notas ...float64) (float64)
 
 const (
 	minimum = "minimum"
