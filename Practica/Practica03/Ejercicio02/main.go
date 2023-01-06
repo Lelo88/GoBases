@@ -18,20 +18,33 @@ func calculaPromedio(notas ...int) (float64){
 	return float64(sumaNot)/float64(len(notas))
 }
 
-func main(){
+func ingreso() (status bool, notas[] int){
 	
-	notas := []int{}
-	fmt.Println("Ingrese las notas que desea ingresar (Ingrese un valor menor a 0 o un valor mayor a 10 para finalizar): ")
-
-	for{
-		var nota int
+	fmt.Println("Ingrese las notas correspondientes al alumnado: ")
+	for {
+		nota := 0
 		fmt.Scanf("%d", &nota)
 		if nota < 0 || nota > 10 {
 			break
 		}
 		notas = append(notas, nota)
-	}
+	} 
 
+	if len(notas) == 0 { 
+		return
+	}
+	status = true
+	return 
+}
+
+func main(){
+	
+	ok,notas := ingreso()
+
+	if !ok {
+		panic("No se puede realizar el calculo")
+	}
+	
 	fmt.Println(notas)
 
 	fmt.Printf("El promedio de las notas ingresadas es de %.2f\n", calculaPromedio(notas...))
