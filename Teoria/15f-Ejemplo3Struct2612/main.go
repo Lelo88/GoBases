@@ -73,5 +73,6 @@ func main(){
 		panic(err)
 	}
 
+	//el programa dara error porque se sobrecarga el struct 
 	fmt.Println(shop)
 }
