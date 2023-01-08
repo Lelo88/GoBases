@@ -23,6 +23,9 @@ func (c Circulo) perim() float64 {
 	return 2 * math.Pi * c.radio
 }
 
+//agregado de clases interfaces
+
+
 func main() {
 	c := Circulo{10}
 	c2:= Circulo{20}
