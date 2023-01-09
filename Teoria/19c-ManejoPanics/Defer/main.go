@@ -4,10 +4,18 @@ import "fmt"
 
 func main() {
 	defer func(){
-		fmt.Println("Esta funcion se ejecuta a pesar de producirse un panic")
+		fmt.Println("Soy la funcion diferida 1")
 	}()
+	function() //La ultima funcion que entra es la primera que se llama. La primera es la ultima
 	
-	panic("se produjo un panic")
+	fmt.Println("Todo salio bien")
 
+}
+
+func function() {
+	defer func(){
+		//fmt.Println("Soy la funcion diferida 2")
+		panic("Ocurrio un error fatal")
+	}()
 }
 

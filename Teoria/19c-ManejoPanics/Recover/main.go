@@ -1,3 +1,5 @@
+//recover intercepta el panic para que el cierre no sea abrupto
+
 package main
 
 import "fmt"
