@@ -18,4 +18,9 @@ func main(){
 	incrementar(&v) //llamamos a la funcion v pasando como argumento la variable con &, es decir, su posicion en memoria para que pueda ser modificada
 
 	fmt.Println("Ahora v vale: ", v)
+
+	p:= new(int) //forma de inicializar punteros (vale 0)
+	fmt.Println("p vale: ", *p)
+	*p++
+	fmt.Println("p vale: ", *p) 
 }
