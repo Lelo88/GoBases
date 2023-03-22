@@ -56,6 +56,7 @@ func (c Circle) GetPerimeter() float64 {
 	return 2 * math.Pi * c.Radius
 }
 
+//constructor 
 func NewGeometry(name string, value ...float64) (instance Geometry, ok bool) {
 	switch name {
 	case RectangleType:
@@ -74,13 +75,16 @@ func NewGeometry(name string, value ...float64) (instance Geometry, ok bool) {
 	return
 }
 
+func medidas (g Geometry){
+	fmt.Println("Nombre de la figura: " + g.GetName())
+	fmt.Printf("Perimetro: %.2f\n",g.GetPerimeter())
+	fmt.Printf("Area: %.2f\n",g.GetArea())
+}
+
 func main() {
 	geometry, ok := NewGeometry(RectangleType,  2, 3)
     if!ok {
         panic("failed to create geometry")
     }
-    fmt.Println(geometry.GetName())
-    fmt.Println(geometry.GetArea())
-	fmt.Println(geometry.GetPerimeter())
-	fmt.Println()
+    medidas(geometry)
 }
