@@ -6,7 +6,7 @@ import (
 )
 
 func solution(num1 *int64, num2 *int64) (int64, error) {
-	if num1 == nil || num2 == nil {
+	if *num1 <= 0 && *num2 <=0 {
 		return 0, errors.New("no se puede realizar la operación")
 	}
 
