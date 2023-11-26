@@ -23,4 +23,7 @@ func main(){
 	nuevoEntero := int8(flotante)
 
 	fmt.Println(nuevoEntero)
+
+	numHexa := 0x11
+	fmt.Println("El numero hexadecimal 0x11 es: ", numHexa) // 17
 }
