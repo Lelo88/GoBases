@@ -83,7 +83,7 @@ func medidas (g Geometry){
 
 func main() {
 	geometry, ok := NewGeometry(RectangleType,  2, 3)
-    if!ok {
+    if !ok {
         panic("failed to create geometry")
     }
     medidas(geometry)
