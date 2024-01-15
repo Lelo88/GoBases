@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/levillalba/Documents/GitHub/GoBases/Teoria/08-ForWhile/08-ForWhile.go"
+            "program": "/Users/2021/Documents/GoBases/Teoria/08-ForWhile/08-ForWhile.go"
         }
     ]
 }
