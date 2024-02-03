@@ -8,10 +8,10 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 
 	var (
-		nombre = "Leandro"
+		nombre    = "Leandro"
 		direccion = "Calle Falsa 123"
 	)
 
