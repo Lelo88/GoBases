@@ -15,4 +15,15 @@ func main(){
 	)
 	
 	fmt.Println(status, producto, precio, cantidad)
+
+	// constante no definida
+	 const sinDefinir = 10
+	 fmt.Println(sinDefinir)
+
+	// constante definida
+	 const definido int64 = 10
+	 fmt.Println(definido)
+
+	 // Si la constante no tiene tipo, el compilador lo infiere. Esto quiere decir que el compilador le asigna un tipo a la constante.
+	 // y si no se le asigna un tipo, el compilador le asigna el tipo de la variable que se le asigna.
 }

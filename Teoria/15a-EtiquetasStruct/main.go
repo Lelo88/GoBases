@@ -25,6 +25,10 @@ func main(){
 	per := Persona {"Leandro","Villalba","123456","Calle Falsa 123"}
 
 	miJson, err := json.Marshal(per)
+	if err != nil {
+		fmt.Println("Error al convertir a JSON:", err)
+		return
+	}
 
 	fmt.Println(string(miJson))
 	fmt.Println(err)
