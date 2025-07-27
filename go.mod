@@ -4,7 +4,7 @@ go 1.22.0
 
 toolchain go1.23.3
 
-require github.com/stretchr/testify v1.9.0
+require github.com/stretchr/testify v1.10.0
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
