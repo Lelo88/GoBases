@@ -11,7 +11,7 @@ func Test_century(t *testing.T) {
 	pyear := &year
 
 	result, err := century(pyear)
-	
+
 	require.NoError(t, err)
 	require.Equal(t, int64(21), result)
 }
@@ -21,9 +21,9 @@ func Test_centuryWithErr(t *testing.T) {
 	pyear := &year
 
 	result, err := century(pyear)
-	
+
 	require.Error(t, err)
-	require.Equal(t, nil, result)
+	require.Equal(t, int64(0), result)
 	require.ErrorContains(t, err, "no se puede realizar la operación")
 }
 
