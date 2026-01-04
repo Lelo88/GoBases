@@ -8,23 +8,23 @@ import (
 	"fmt"
 )
 
-func century (year *int64) (int64, error) {
-	
+func century(year *int64) (int64, error) {
+
 	if *year <= 0 {
 		return 0, errors.New("no se puede realizar la operación")
 	}
-	
-	return (*year / 100) + 1, nil
+
+	return ((*year - 1) / 100) + 1, nil
 }
 
 func main() {
 	var year int64 = 2005
 	pyear := &year
-	
+
 	result, err := century(pyear)
 	if err != nil {
 		fmt.Println(err)
 	}
-	
+
 	fmt.Println(result)
 }
