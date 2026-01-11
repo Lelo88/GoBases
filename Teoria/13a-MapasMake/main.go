@@ -13,6 +13,6 @@ func main() {
   b["Trondheim"] = 3
   b["Stavanger"] = 4
 
-  fmt.Printf("a\t%v\n", a)
-  fmt.Printf("b\t%v\n", b)
+  fmt.Printf("a\t%v\n", a) // a	 map[brand:Ford model:Mustang year:1964]
+  fmt.Printf("b\t%v\n", b) // b	 map[Bergen:2 Oslo:1 Stavanger:4 Trondheim:3]
 }

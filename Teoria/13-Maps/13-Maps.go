@@ -33,4 +33,19 @@ func main(){
 	for key,value := range myMap{
 		fmt.Println(key, ":", value)
 	}
+
+	//crear un map con make
+	map2 := make(map[string]int)
+	map2["Juan"] = 25
+	map2["Maria"] = 30
+	fmt.Println("Mapa creado con make:", map2)
+
+	//crear un map con make y definir el tamaño
+	map3 := make(map[string]int, 10)
+	map3["Juan"] = 25
+	map3["Maria"] = 30
+	fmt.Println("Mapa creado con make y definir el tamaño:", map3)
+
+	// La diferencia entre make(map[string]int) y make(map[string]int, 10) es que el segundo define un tamaño inicial para el map
+	// Esto puede ser útil para optimizar el rendimiento cuando se sabe que el map tendrá un número determinado de elementos
 }
