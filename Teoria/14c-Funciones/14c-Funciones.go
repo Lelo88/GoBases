@@ -96,3 +96,6 @@ func main(){
 	fmt.Println(oper(5.6,3.2)) //luego le paso los argumentos a la variable que he creado (es como si se transformara en una funcion)
 }
 
+// Los orquestadores son útiles cuando se necesita crear una función que depende de otra función
+// y se quiere evitar repetir código
+// un ejemplo de orquestador es la funcion operacionAritmetica2 que retorna una funcion.
