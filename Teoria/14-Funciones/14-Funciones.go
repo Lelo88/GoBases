@@ -110,6 +110,7 @@ func aplicarFuncion(f func(int) int, a int) int {
 // o que retorna una funcion
 // en este caso, se va a hacer una funcion que reciba una funcion y un numero
 // y que retorne el resultado de aplicar la funcion al numero
+// estas funciones son utiles para crear funciones que puedan ser reutilizadas
 
 func double(f func(int) int, a int) int {
 	return f(a * 2)
@@ -123,6 +124,8 @@ func addOne(x int) int {
 // un closure es una funcion que captura una variable del entorno en el que fue creada
 // en este caso, se va a hacer una funcion que retorne otra funcion
 // y que capture una variable del entorno
+// estas funciones son utiles para crear funciones que puedan ser reutilizadas
+// conviene usarlas cuando se necesita crear una funcion que depende de una variable del entorno
 
 func incrementar() func() int {
 	x := 0
