@@ -1,6 +1,16 @@
 # GoBases
 Teoría y práctica de GoBases ML
 
+Requiere Go 1.27.3 o posterior. Con `GOTOOLCHAIN=auto`, Go descarga la
+versión mínima indicada en `go.mod` cuando es necesario.
+
+Para verificar el proyecto:
+
+```sh
+go test ./...
+go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+```
+
 
 # Notaciones
 
